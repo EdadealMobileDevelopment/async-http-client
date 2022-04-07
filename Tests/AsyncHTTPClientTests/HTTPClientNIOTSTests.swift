@@ -111,7 +111,8 @@ class HTTPClientNIOTSTests: XCTestCase {
             }
         #endif
     }
-
+    
+    @available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
     func testTrustRootCertificateLoadFail() {
         guard isTestingNIOTS() else { return }
         #if canImport(Network)
